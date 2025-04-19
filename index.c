@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+// Remember the functions go out of int main(...) {...}, and above it.
+
 typedef struct
 {
    char *buffer;
@@ -12,14 +14,19 @@ typedef struct
 
 InputBuffer *new_input_buffer()
 {
-   InputBuffer *input_buffer = (InputBuffer *)mailoc(sizeof(InputBuffer));
-
+   InputBuffer *input_buffer = malloc(sizeof(InputBuffer));
    input_buffer->buffer = NULL;
    input_buffer->buffer_lenght = 0;
    input_buffer->input_lenght = 0;
 
    // Return the input_buffer
    return input_buffer;
+}
+
+void close_input_buffer(InputBuffer *input_buffer)
+{
+   free(input_buffer->buffer);
+   free(input_buffer);
 }
 
 void print_prompt() { printf("db > "); }
@@ -37,7 +44,7 @@ void read_input(InputBuffer *input_buffer)
 
    // Remove trailing newline
    input_buffer->input_lenght = bytes_read - 1;
-   input_buffer->buffer[bytes_read - 1] = "\0";
+   input_buffer->buffer[bytes_read - 1] = 0;
 }
 
 int main(int argc, char *argv[])
@@ -63,5 +70,3 @@ int main(int argc, char *argv[])
       }
    }
 }
-
-void print_prompt() { printf("db > "); }
