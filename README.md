@@ -6,7 +6,7 @@ this is a side project I created to understand how a database works. As the proj
 
 Quoting the first line of the website:
 
-> as a web developer, I use relational databases every day at my job, but they're a black box to me.
+> As a web developer, I use relational databases every day at my job, but they're a black box to me.
 
 this refers to the fact that he doesn't understand how they work. I can relate as I work with different databases and yet I don't fully understand how to they work.
 
@@ -23,7 +23,7 @@ A query goes through a chain of components in order to retrieve or modify data. 
 
 Defining this terms I will quote different websites as I make my research.
 
-> Tokenization, in the realm of Natural Language Processing (NLP) and machine learning, refers tot he process of converting a sequence of text into smaller parts, known as tokens.
+> Tokenization, in the realm of Natural Language Processing (NLP) and machine learning, refers to the process of converting a sequence of text into smaller parts, known as tokens.
 
 So, what it does is taken some text (e.g: "Hello", "World") and then, converting into a sequence of smaller parts.
 (More like a string of characters: "H", "e", "l", "l", "o", "", "W", "o", "r", "l", "d")
